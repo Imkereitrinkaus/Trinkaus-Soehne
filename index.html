@@ -3,58 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trinkaus & Söhne - Honig aus Witten-Heven und der Region</title>
+    <title>Imkerei Trinkaus - Natürlicher Honig aus der Region</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
     <!-- Konfigurationsdateien laden -->
     <script src="config.js"></script>
     <script src="products.js"></script>
-    <script src="news.js"></script>
+    <script src="news-index.js"></script>
     <script src="content.js"></script>
 </head>
 <body>
     <!-- Navigation wird dynamisch generiert -->
     <nav class="navbar" id="navbar"></nav>
 
-    <!-- Hero wird dynamisch generiert -->
-    <section id="home" class="hero"></section>
+    <!-- Main Container für feste Bereiche -->
+    <div class="main-container">
 
-    <!-- Produkte werden dynamisch generiert -->
-    <section id="products" class="products">
-        <div class="container">
+        <!-- Hero wird dynamisch generiert -->
+        <section id="home" class="hero section-compact"></section>
+
+        <!-- Produkte werden dynamisch generiert -->
+        <section id="products" class="products section-compact">
             <h2 class="section-title" id="products-title"></h2>
             <div class="products-grid" id="products-grid"></div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Shop wird dynamisch generiert -->
-    <section id="shop" class="shop">
-        <div class="container" id="shop-container"></div>
-    </section>
+        <!-- Shop wird dynamisch generiert -->
+        <section id="shop" class="shop">
+            <div class="container" id="shop-container"></div>
+        </section>
 
-    <!-- News werden dynamisch generiert -->
-    <section id="news" class="news">
-        <div class="container">
+        <!-- News werden dynamisch generiert -->
+        <section id="news" class="news section-compact">
             <h2 class="section-title" id="news-title"></h2>
             <div class="news-grid" id="news-grid"></div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About wird dynamisch generiert -->
-    <section id="about" class="about">
-        <div class="container" id="about-container"></div>
-    </section>
+        <!-- About wird dynamisch generiert -->
+        <section id="about" class="about section-compact">
+            <div class="about-container" id="about-container"></div>
+        </section>
 
-    <!-- Bees wird dynamisch generiert -->
-    <section id="bees" class="bees">
-        <div class="container" id="bees-container"></div>
-    </section>
+        <!-- Bees wird dynamisch generiert -->
+        <section id="bees" class="bees section-compact">
+            <div class="bees-container" id="bees-container"></div>
+        </section>
 
-    <!-- Contact wird dynamisch generiert -->
-    <section id="contact" class="contact">
-        <div class="container" id="contact-container"></div>
-    </section>
+        <!-- Contact wird dynamisch generiert -->
+        <section id="contact" class="contact section-compact">
+            <div class="contact-container" id="contact-container"></div>
+        </section>
+
+    </div>
 
     <!-- Legal Sections werden dynamisch generiert -->
     <section id="impressum" class="legal">
