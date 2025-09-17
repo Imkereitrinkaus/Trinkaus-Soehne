@@ -65,7 +65,7 @@ const IMKEREI_CONFIG = {
 
     // BILDER - Optimale Größen für beste Performance
     images: {
-        logo: "logo.png", // 200x200px, PNG mit transparentem Hintergrund
+        logo: "trinkaus-logo.png", // 200x200px, PNG mit transparentem Hintergrund
         heroImage: "hero-honey.jpg", // 800x600px, JPG, max 150KB
         aboutImage: "imker-portrait.jpg", // 600x400px, JPG, max 100KB
         favicon: "favicon.ico" // 32x32px, ICO Format
