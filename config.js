@@ -48,9 +48,9 @@ const IMKEREI_CONFIG = {
         honeyPerYear: "300kg"
     },
 
-    // VERSAND & SHOP
+   // VERSAND & SHOP
     shipping: {
-        cost: 6,90,
+        cost: 4.90,
         freeFrom: 30.00,
         deliveryTime: "2-3 Werktage",
         paymentMethods: "Rechnung, Überweisung"
@@ -58,7 +58,9 @@ const IMKEREI_CONFIG = {
 
     // SOCIAL MEDIA (leer lassen wenn nicht vorhanden)
     social: {
- 
+        facebook: "", // z.B. "https://facebook.com/imkerei.trinkaus"
+        instagram: "", // z.B. "https://instagram.com/imkerei_trinkaus"
+        youtube: "", // z.B. "https://youtube.com/@imkereitrinkaus"
     },
 
     // BILDER - Optimale Größen für beste Performance
