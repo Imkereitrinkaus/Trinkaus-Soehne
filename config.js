@@ -13,7 +13,7 @@ const IMKEREI_CONFIG = {
 
     // KONTAKTDATEN - Hier alles zentral pflegen!
     contact: {
-        street: "Am Stämmsich Busch 32",
+        street: "Am Stämmisch Busch 32",
         zip: "58455",
         city: "Witten", 
         phone: "+49 (0) 176 21712753",
