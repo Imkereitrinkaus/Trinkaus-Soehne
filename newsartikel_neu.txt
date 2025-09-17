@@ -1,0 +1,16 @@
+// 1. Neue Datei: news/mein-neuer-artikel.js
+const ARTICLE_CONTENT = {
+    title: "Mein neuer Artikel",
+    content: `<p>Hier steht der Inhalt...</p>`
+};
+
+// 2. In news-index.js registrieren:
+{
+    id: "mein-neuer-artikel",
+    title: "Mein neuer Artikel", 
+    date: "2024-09-18",  // Aktuelles Datum
+    status: "published",  // Macht ihn sichtbar
+    category: "Bienenpflege"
+}
+
+// 3. Fertig! → Automatisch als #1 angezeigt
