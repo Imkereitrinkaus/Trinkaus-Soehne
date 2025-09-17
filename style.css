@@ -1,5 +1,5 @@
 /* ===================================================
-   VOLLSTÄNDIGES VERBESSERTES CSS - KOMPATIBEL
+   IMKEREI TRINKAUS - VOLLSTÄNDIGES CSS
    ================================================== */
 
 * {
@@ -32,7 +32,15 @@ body {
     background-color: var(--honey-light);
 }
 
-/* Navigation - Unverändert vom Original */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+/* ===================================================
+   NAVIGATION
+   ================================================== */
+
 .navbar {
     background-color: var(--white);
     box-shadow: 0 2px 10px var(--gold-shadow);
@@ -125,7 +133,10 @@ body {
     border-radius: 2px;
 }
 
-/* Container System */
+/* ===================================================
+   ALLGEMEINE STYLES
+   ================================================== */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -147,7 +158,56 @@ section {
     margin-bottom: 50px;
 }
 
-/* Hero Section */
+.btn {
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--honey-gold), var(--honey-amber));
+    color: var(--white);
+    box-shadow: 0 4px 15px var(--gold-shadow);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--honey-amber), var(--honey-gold));
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px var(--gold-shadow);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--honey-dark);
+    border: 2px solid var(--honey-gold);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, var(--honey-gold), var(--honey-amber));
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.btn-large {
+    width: 100%;
+    padding: 16px 32px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+/* ===================================================
+   HERO SECTION
+   ================================================== */
+
 .hero {
     display: flex;
     align-items: center;
@@ -185,40 +245,6 @@ section {
     gap: 20px;
 }
 
-.btn {
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-    display: inline-block;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, var(--honey-gold), var(--honey-amber));
-    color: var(--white);
-    box-shadow: 0 4px 15px var(--gold-shadow);
-}
-
-.btn-primary:hover {
-    background: linear-gradient(135deg, var(--honey-amber), var(--honey-gold));
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px var(--gold-shadow);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: var(--honey-dark);
-    border: 2px solid var(--honey-gold);
-}
-
-.btn-secondary:hover {
-    background: linear-gradient(135deg, var(--honey-gold), var(--honey-amber));
-    color: var(--white);
-    transform: translateY(-3px);
-}
-
 .hero-image {
     flex: 1;
 }
@@ -231,7 +257,10 @@ section {
     border: 3px solid var(--honey-gold);
 }
 
-/* Products Section */
+/* ===================================================
+   PRODUCTS SECTION
+   ================================================== */
+
 .products {
     background: linear-gradient(135deg, var(--white), var(--honey-cream));
 }
@@ -312,7 +341,10 @@ section {
     transform: translateY(-2px);
 }
 
-/* VERBESSERTES SHOP-DESIGN */
+/* ===================================================
+   SHOP SECTION - VERBESSERTES DESIGN
+   ================================================== */
+
 .shop {
     background: var(--honey-light);
     padding: 80px 0;
@@ -327,7 +359,7 @@ section {
     padding: 0 20px;
 }
 
-/* Info Sidebar */
+/* Linke Spalte: Bestellinfos */
 .order-info {
     background: linear-gradient(135deg, var(--honey-gold), var(--honey-amber));
     color: var(--white);
@@ -336,12 +368,16 @@ section {
     height: fit-content;
     position: sticky;
     top: 100px;
+    box-shadow: 0 10px 30px var(--gold-shadow);
 }
 
 .order-info h3 {
     color: var(--white);
     margin-bottom: 20px;
     font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .order-steps {
@@ -375,6 +411,9 @@ section {
     color: var(--white);
     margin-bottom: 15px;
     font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .shipping-info p {
@@ -383,7 +422,7 @@ section {
     opacity: 0.95;
 }
 
-/* Hauptformular */
+/* Rechte Spalte: Hauptformular */
 .order-form {
     background: var(--white);
     border-radius: 20px;
@@ -398,6 +437,10 @@ section {
     margin-bottom: 30px;
     text-align: center;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .order-form h3::after {
@@ -412,6 +455,7 @@ section {
     border-radius: 2px;
 }
 
+/* Form Sections */
 .form-section {
     margin-bottom: 35px;
     padding: 25px;
@@ -424,6 +468,9 @@ section {
     color: var(--honey-dark);
     margin-bottom: 20px;
     font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 /* Produktauswahl */
@@ -500,10 +547,17 @@ section {
     font-weight: 700;
 }
 
+/* Quantity Control */
 .quantity-control {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.quantity-control label {
+    font-size: 0.9rem;
+    color: var(--honey-dark);
+    font-weight: 500;
 }
 
 .qty-input {
@@ -580,6 +634,7 @@ section {
     font-size: 1rem;
     background: var(--white);
     transition: all 0.3s ease;
+    font-family: inherit;
 }
 
 .form-group input:focus,
@@ -589,6 +644,12 @@ section {
     box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
 }
 
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Checkboxes */
 .checkbox-group {
     margin-bottom: 15px;
 }
@@ -628,19 +689,134 @@ section {
     transform: translate(-50%, -50%);
 }
 
-.btn-large {
-    width: 100%;
-    padding: 16px 32px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    border-radius: 12px;
-    margin-top: 20px;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
+.link {
+    color: var(--honey-gold);
+    text-decoration: none;
 }
 
-/* About, Contact, News - Kompakt */
+.link:hover {
+    text-decoration: underline;
+}
+
+/* ===================================================
+   NEWS SECTION
+   ================================================== */
+
+.news {
+    background: linear-gradient(135deg, var(--white), var(--honey-cream));
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.news-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px var(--gold-shadow);
+    border: 2px solid var(--honey-cream);
+    transition: all 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px var(--gold-shadow);
+    border-color: var(--honey-gold);
+}
+
+.news-card.featured {
+    grid-column: span 1;
+    border-color: var(--honey-gold);
+}
+
+.news-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.news-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover .news-img {
+    transform: scale(1.05);
+}
+
+.news-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--honey-gold);
+    color: var(--white);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.news-content {
+    padding: 25px;
+}
+
+.news-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: var(--honey-amber);
+}
+
+.news-meta i {
+    margin-right: 5px;
+}
+
+.news-category {
+    background: var(--honey-cream);
+    color: var(--honey-dark);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.news-title {
+    font-family: var(--font-heading);
+    color: var(--honey-dark);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.news-excerpt {
+    color: var(--bee-black);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.news-link {
+    color: var(--honey-gold);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.news-link:hover {
+    color: var(--honey-amber);
+    transform: translateX(5px);
+}
+
+/* ===================================================
+   ABOUT SECTION
+   ================================================== */
+
 .about {
     background: var(--white);
 }
@@ -648,7 +824,7 @@ section {
 .about-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 40px;
+    gap: 50px;
     align-items: center;
 }
 
@@ -671,6 +847,12 @@ section {
     border-radius: 15px;
     text-align: center;
     border: 2px solid var(--honey-gold);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px var(--gold-shadow);
 }
 
 .stat-number {
@@ -692,7 +874,52 @@ section {
     border: 3px solid var(--honey-gold);
 }
 
-/* Contact */
+/* ===================================================
+   BEES SECTION
+   ================================================== */
+
+.bees {
+    background: var(--honey-light);
+}
+
+.bee-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.bee-info-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px var(--gold-shadow);
+    border: 2px solid var(--honey-gold);
+    transition: all 0.3s ease;
+}
+
+.bee-info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px var(--gold-shadow);
+}
+
+.bee-icon {
+    font-size: 3rem;
+    color: var(--honey-gold);
+    margin-bottom: 20px;
+}
+
+.bee-info-card h3 {
+    font-family: var(--font-heading);
+    color: var(--honey-dark);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* ===================================================
+   CONTACT SECTION
+   ================================================== */
+
 .contact {
     background: linear-gradient(135deg, var(--honey-cream), var(--honey-light));
 }
@@ -700,7 +927,7 @@ section {
 .contact-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 40px;
+    gap: 50px;
 }
 
 .contact-info {
@@ -776,72 +1003,15 @@ section {
     font-size: 1rem;
 }
 
-/* News */
-.news {
-    background: linear-gradient(135deg, var(--white), var(--honey-cream));
+.newsletter-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
 }
 
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-}
+/* ===================================================
+   FOOTER
+   ================================================== */
 
-.news-card {
-    background: var(--white);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px var(--gold-shadow);
-    border: 2px solid var(--honey-cream);
-    transition: all 0.3s ease;
-}
-
-.news-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px var(--gold-shadow);
-    border-color: var(--honey-gold);
-}
-
-/* Bees */
-.bees {
-    background: var(--honey-light);
-}
-
-.bee-info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.bee-info-card {
-    background: var(--white);
-    padding: 40px 30px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 8px 25px var(--gold-shadow);
-    border: 2px solid var(--honey-gold);
-    transition: all 0.3s ease;
-}
-
-.bee-info-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px var(--gold-shadow);
-}
-
-.bee-icon {
-    font-size: 3rem;
-    color: var(--honey-gold);
-    margin-bottom: 20px;
-}
-
-.bee-info-card h3 {
-    font-family: var(--font-heading);
-    color: var(--honey-dark);
-    margin-bottom: 15px;
-    font-size: 1.3rem;
-}
-
-/* Footer */
 .footer {
     background: var(--bee-black);
     color: var(--white);
@@ -865,6 +1035,7 @@ section {
 .social-links {
     display: flex;
     gap: 15px;
+    margin-top: 15px;
 }
 
 .social-link {
@@ -912,7 +1083,10 @@ section {
     opacity: 0.6;
 }
 
-/* Responsive */
+/* ===================================================
+   RESPONSIVE DESIGN
+   ================================================== */
+
 @media screen and (max-width: 1200px) {
     .shop-content {
         grid-template-columns: 1fr;
@@ -1015,15 +1189,16 @@ section {
         justify-content: center;
         margin-top: 10px;
     }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 70px;
-}
+/* ===================================================
+   ANIMATIONEN
+   ================================================== */
 
-/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -1045,6 +1220,21 @@ html {
     animation: goldShimmer 3s linear infinite;
 }
 
-.hero-content, .product-card {
-    animation: fadeInUp 0.8s ease-out;
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--honey-light);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--honey-gold);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--honey-amber);
 }

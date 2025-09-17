@@ -14,62 +14,529 @@
     <script src="content.js"></script>
 </head>
 <body>
-    <!-- Navigation wird dynamisch generiert -->
-    <nav class="navbar" id="navbar"></nav>
+    <!-- Responsive Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="Imkerei Trinkaus Logo" class="logo-img">
+                <span class="nav-title">Imkerei Trinkaus</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <div class="nav-item">
+                    <a href="#home" class="nav-link">Startseite</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#products" class="nav-link">Honig-Sortiment</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#about" class="nav-link">Über uns</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#news" class="nav-link">Aktuelles</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#bees" class="nav-link">Unsere Bienen</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#contact" class="nav-link">Kontakt</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#shop" class="nav-link nav-cta">Bestellen</a>
+                </div>
+            </div>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Main Container für feste Bereiche -->
-    <div class="main-container">
-
-        <!-- Hero wird dynamisch generiert -->
-        <section id="home" class="hero section-compact"></section>
-
-        <!-- Produkte werden dynamisch generiert -->
-        <section id="products" class="products section-compact">
-            <h2 class="section-title" id="products-title"></h2>
-            <div class="products-grid" id="products-grid"></div>
-        </section>
-
-        <!-- Shop wird dynamisch generiert -->
-        <section id="shop" class="shop">
-            <div class="container" id="shop-container"></div>
-        </section>
-
-        <!-- News werden dynamisch generiert -->
-        <section id="news" class="news section-compact">
-            <h2 class="section-title" id="news-title"></h2>
-            <div class="news-grid" id="news-grid"></div>
-        </section>
-
-        <!-- About wird dynamisch generiert -->
-        <section id="about" class="about section-compact">
-            <div class="about-container" id="about-container"></div>
-        </section>
-
-        <!-- Bees wird dynamisch generiert -->
-        <section id="bees" class="bees section-compact">
-            <div class="bees-container" id="bees-container"></div>
-        </section>
-
-        <!-- Contact wird dynamisch generiert -->
-        <section id="contact" class="contact section-compact">
-            <div class="contact-container" id="contact-container"></div>
-        </section>
-
-    </div>
-
-    <!-- Legal Sections werden dynamisch generiert -->
-    <section id="impressum" class="legal">
-        <div class="container" id="impressum-container"></div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Natürlicher Honig aus der Region</h1>
+            <p class="hero-subtitle">Seit 1995 produzieren wir mit Liebe und Sorgfalt hochwertigen Honig für Sie und Ihre Familie.</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">Unser Honig</a>
+                <a href="#about" class="btn btn-secondary">Mehr erfahren</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="hero-honey.jpg" alt="Frischer Honig" class="hero-img">
+        </div>
     </section>
 
-    <section id="datenschutz" class="legal">
-        <div class="container" id="datenschutz-container"></div>
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Unser Honig-Sortiment</h2>
+            <div class="products-grid">
+                <!-- Produktkarten werden dynamisch generiert -->
+                <div class="product-card">
+                    <img src="blueten-honig.jpg" alt="Blütenhonig" class="product-img">
+                    <h3>Blütenhonig</h3>
+                    <p>Mild-aromatischer Honig von verschiedenen Blüten unserer Region. Perfekt zum Süßen von Tee oder aufs Brot.</p>
+                    <div class="product-details">
+                        <span class="price">€8,50</span>
+                        <span class="size">500g Glas</span>
+                    </div>
+                    <a href="#shop" class="btn btn-product" data-product="Blütenhonig" data-price="8.50">Bestellen</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="wald-honig.jpg" alt="Waldhonig" class="product-img">
+                    <h3>Waldhonig</h3>
+                    <p>Kräftiger Honig aus dem heimischen Wald - reich an Mineralstoffen und mit würzigem Aroma.</p>
+                    <div class="product-details">
+                        <span class="price">€9,50</span>
+                        <span class="size">500g Glas</span>
+                    </div>
+                    <a href="#shop" class="btn btn-product" data-product="Waldhonig" data-price="9.50">Bestellen</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="akazien-honig.jpg" alt="Akazienhonig" class="product-img">
+                    <h3>Akazienhonig</h3>
+                    <p>Heller, milder Honig - perfekt für Kinder und Honig-Einsteiger. Kristallisiert sehr langsam.</p>
+                    <div class="product-details">
+                        <span class="price">€10,50</span>
+                        <span class="size">500g Glas</span>
+                    </div>
+                    <a href="#shop" class="btn btn-product" data-product="Akazienhonig" data-price="10.50">Bestellen</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="rapshonig.jpg" alt="Rapshonig" class="product-img">
+                    <h3>Rapshonig</h3>
+                    <p>Cremiger, heller Honig mit mildem Geschmack. Naturbelassen und kalt geschleudert.</p>
+                    <div class="product-details">
+                        <span class="price">€8,00</span>
+                        <span class="size">500g Glas</span>
+                    </div>
+                    <a href="#shop" class="btn btn-product" data-product="Rapshonig" data-price="8.00">Bestellen</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="lindenhonig.jpg" alt="Lindenhonig" class="product-img">
+                    <h3>Lindenhonig</h3>
+                    <p>Aromatischer Honig mit charakteristischem Geschmack. Besonders beliebt bei Kennern.</p>
+                    <div class="product-details">
+                        <span class="price">€11,00</span>
+                        <span class="size">500g Glas</span>
+                    </div>
+                    <a href="#shop" class="btn btn-product" data-product="Lindenhonig" data-price="11.00">Bestellen</a>
+                </div>
+
+                <div class="product-card">
+                    <img src="wabenhonig.jpg" alt="Wabenhonig" class="product-img">
+                    <h3>Wabenhonig</h3>
+                    <p>Honig direkt aus der Wabe - ein besonderes Erlebnis mit natürlichem Wachs zum Kauen.</p>
+                    <div class="product-details">
+                        <span class="price">€15,00</span>
+                        <span class="size">Wabenstück ca. 300g</span>
+                    </div>
+                    <a href="#shop" class="btn btn-product" data-product="Wabenhonig" data-price="15.00">Bestellen</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer wird dynamisch generiert -->
-    <footer class="footer" id="footer"></footer>
+    <!-- VERBESSERTES BESTELLFORMULAR -->
+    <section id="shop" class="shop">
+        <div class="container">
+            <h2 class="section-title">Honig bestellen</h2>
+            <div class="shop-content">
+                <!-- Linke Spalte: Bestellinfos -->
+                <div class="order-info">
+                    <h3><i class="fas fa-shopping-cart"></i> So einfach bestellen Sie:</h3>
+                    <ul class="order-steps">
+                        <li><i class="fas fa-check-circle"></i> Füllen Sie das Bestellformular aus</li>
+                        <li><i class="fas fa-check-circle"></i> Wir bestätigen Ihre Bestellung per E-Mail</li>
+                        <li><i class="fas fa-check-circle"></i> Sie erhalten eine Rechnung</li>
+                        <li><i class="fas fa-check-circle"></i> Nach Zahlungseingang versenden wir Ihren Honig</li>
+                    </ul>
 
-    <!-- Hauptskript -->
-    <script src="main.js"></script>
+                    <div class="shipping-info">
+                        <h4><i class="fas fa-truck"></i> Versand & Lieferung</h4>
+                        <p><strong>Versandkosten:</strong> €4,90 (ab €30,- versandkostenfrei)</p>
+                        <p><strong>Lieferzeit:</strong> 2-3 Werktage</p>
+                        <p><strong>Zahlung:</strong> Rechnung, Überweisung</p>
+                    </div>
+                </div>
+
+                <!-- Rechte Spalte: Hauptformular -->
+                <form class="order-form" id="orderForm">
+                    <h3><i class="fas fa-clipboard-list"></i> Ihre Bestellung</h3>
+
+                    <!-- Produktauswahl -->
+                    <div class="form-section">
+                        <h4><i class="fas fa-honey-pot"></i> Honig auswählen:</h4>
+                        <div class="product-selection">
+                            <div class="product-option">
+                                <label class="product-label">
+                                    <input type="checkbox" name="products" value="Blütenhonig" data-price="8.50">
+                                    <div class="product-info">
+                                        <span class="product-name">Blütenhonig</span>
+                                        <span class="product-price">€8,50</span>
+                                    </div>
+                                </label>
+                                <div class="quantity-control">
+                                    <label>Anzahl:</label>
+                                    <input type="number" name="qty_blütenhonig" min="0" max="20" value="0" class="qty-input">
+                                </div>
+                            </div>
+
+                            <div class="product-option">
+                                <label class="product-label">
+                                    <input type="checkbox" name="products" value="Waldhonig" data-price="9.50">
+                                    <div class="product-info">
+                                        <span class="product-name">Waldhonig</span>
+                                        <span class="product-price">€9,50</span>
+                                    </div>
+                                </label>
+                                <div class="quantity-control">
+                                    <label>Anzahl:</label>
+                                    <input type="number" name="qty_waldhonig" min="0" max="20" value="0" class="qty-input">
+                                </div>
+                            </div>
+
+                            <div class="product-option">
+                                <label class="product-label">
+                                    <input type="checkbox" name="products" value="Akazienhonig" data-price="10.50">
+                                    <div class="product-info">
+                                        <span class="product-name">Akazienhonig</span>
+                                        <span class="product-price">€10,50</span>
+                                    </div>
+                                </label>
+                                <div class="quantity-control">
+                                    <label>Anzahl:</label>
+                                    <input type="number" name="qty_akazienhonig" min="0" max="20" value="0" class="qty-input">
+                                </div>
+                            </div>
+
+                            <div class="product-option">
+                                <label class="product-label">
+                                    <input type="checkbox" name="products" value="Rapshonig" data-price="8.00">
+                                    <div class="product-info">
+                                        <span class="product-name">Rapshonig</span>
+                                        <span class="product-price">€8,00</span>
+                                    </div>
+                                </label>
+                                <div class="quantity-control">
+                                    <label>Anzahl:</label>
+                                    <input type="number" name="qty_rapshonig" min="0" max="20" value="0" class="qty-input">
+                                </div>
+                            </div>
+
+                            <div class="product-option">
+                                <label class="product-label">
+                                    <input type="checkbox" name="products" value="Lindenhonig" data-price="11.00">
+                                    <div class="product-info">
+                                        <span class="product-name">Lindenhonig</span>
+                                        <span class="product-price">€11,00</span>
+                                    </div>
+                                </label>
+                                <div class="quantity-control">
+                                    <label>Anzahl:</label>
+                                    <input type="number" name="qty_lindenhonig" min="0" max="20" value="0" class="qty-input">
+                                </div>
+                            </div>
+
+                            <div class="product-option">
+                                <label class="product-label">
+                                    <input type="checkbox" name="products" value="Wabenhonig" data-price="15.00">
+                                    <div class="product-info">
+                                        <span class="product-name">Wabenhonig</span>
+                                        <span class="product-price">€15,00</span>
+                                    </div>
+                                </label>
+                                <div class="quantity-control">
+                                    <label>Anzahl:</label>
+                                    <input type="number" name="qty_wabenhonig" min="0" max="10" value="0" class="qty-input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Zusammenfassung -->
+                    <div class="order-summary">
+                        <div class="summary-row">
+                            <span>Zwischensumme:</span>
+                            <span id="subtotal">€0,00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Versandkosten:</span>
+                            <span id="shipping">€4,90</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span><strong>Gesamtsumme:</strong></span>
+                            <span id="total"><strong>€4,90</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- Kundeninformationen -->
+                    <div class="form-section">
+                        <h4><i class="fas fa-user"></i> Ihre Kontaktdaten:</h4>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName">Vorname *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Nachname *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-Mail *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lieferadresse -->
+                    <div class="form-section">
+                        <h4><i class="fas fa-map-marker-alt"></i> Lieferadresse:</h4>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="street">Straße, Hausnummer *</label>
+                                <input type="text" id="street" name="street" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">PLZ *</label>
+                                <input type="text" id="zip" name="zip" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Ort *</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Besondere Wünsche -->
+                    <div class="form-section">
+                        <h4><i class="fas fa-comment"></i> Besondere Wünsche oder Anmerkungen:</h4>
+                        <div class="form-group">
+                            <textarea id="notes" name="notes" rows="4" placeholder="Haben Sie besondere Wünsche oder Fragen zu Ihrer Bestellung?"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Datenschutz -->
+                    <div class="form-section">
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="privacy" required>
+                                <span class="checkmark"></span>
+                                Ich habe die <a href="#datenschutz" class="link">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. *
+                            </label>
+                        </div>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter">
+                                <span class="checkmark"></span>
+                                Ich möchte den Newsletter mit Informationen zu neuen Ernten und Angeboten erhalten.
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i> Bestellung absenden
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news">
+        <div class="container">
+            <h2 class="section-title">Aktuelles aus unserer Imkerei</h2>
+            <div class="news-grid">
+                <article class="news-card featured">
+                    <div class="news-image">
+                        <img src="news-schwarmzeit.jpg" alt="Schwarmzeit 2024" class="news-img">
+                        <div class="news-badge">Neu</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date"><i class="fas fa-calendar"></i> 15. September 2024</span>
+                            <span class="news-category">Bienenpflege</span>
+                        </div>
+                        <h3 class="news-title">Erfolgreiche Schwarmzeit 2024</h3>
+                        <p class="news-excerpt">Dieses Jahr konnten wir 8 neue Bienenvölker durch natürliche Schwärme gewinnen. Erfahren Sie mehr über unsere Schwarmfangmethoden...</p>
+                        <a href="#" class="news-link">Weiterlesen <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="news-honig-ernte.jpg" alt="Honigernte Sommer 2024" class="news-img">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date"><i class="fas fa-calendar"></i> 28. August 2024</span>
+                            <span class="news-category">Ernte</span>
+                        </div>
+                        <h3 class="news-title">Reiche Sommerernte dank gutem Wetter</h3>
+                        <p class="news-excerpt">Der warme Sommer bescherte uns eine außergewöhnlich gute Honigernte. Über 400kg bester Blütenhonig konnten wir einfahren...</p>
+                        <a href="#" class="news-link">Weiterlesen <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Über unsere Imkerei</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Seit über 25 Jahren führen wir unsere Imkerei mit Leidenschaft und Respekt vor der Natur. Unsere Bienen leben in natürlicher Umgebung und produzieren Honig höchster Qualität.</p>
+                        <p>Was uns besonders macht: Wir verzichten auf chemische Behandlungen und setzen auf natürliche Bienenhaltung. Unser Honig wird kalt geschleudert und nie erhitzt - so bleiben alle wertvollen Inhaltsstoffe erhalten.</p>
+
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">25+</div>
+                                <div class="stat-label">Jahre Erfahrung</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">45</div>
+                                <div class="stat-label">Bienenvölker</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">1500kg</div>
+                                <div class="stat-label">Honig pro Jahr</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="imker-portrait.jpg" alt="Imker bei der Arbeit" class="about-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bees Section -->
+    <section id="bees" class="bees">
+        <div class="container">
+            <h2 class="section-title">Unsere Bienen</h2>
+            <div class="bees-content">
+                <div class="bee-info-grid">
+                    <div class="bee-info-card">
+                        <i class="fas fa-leaf bee-icon"></i>
+                        <h3>Natürliche Haltung</h3>
+                        <p>Unsere Bienen leben in artgerechten Holzbeuten ohne Stress und mit viel Platz für natürliches Verhalten.</p>
+                    </div>
+                    <div class="bee-info-card">
+                        <i class="fas fa-heart bee-icon"></i>
+                        <h3>Gesunde Völker</h3>
+                        <p>Durch sorgfältige Pflege und Varroa-Behandlung mit natürlichen Mitteln halten wir unsere Völker gesund.</p>
+                    </div>
+                    <div class="bee-info-card">
+                        <i class="fas fa-flower bee-icon"></i>
+                        <h3>Reiche Tracht</h3>
+                        <p>Unsere Standorte bieten den Bienen vielfältige Blütentracht von Frühjahr bis Herbst.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Kontakt</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-details">
+                            <h3>Adresse</h3>
+                            <p>Musterstraße 123<br>12345 Musterstadt</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-details">
+                            <h3>Telefon</h3>
+                            <p>+49 (0) 123 456789</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-details">
+                            <h3>E-Mail</h3>
+                            <p>info@imkerei-trinkaus.de</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="contact-details">
+                            <h3>Öffnungszeiten</h3>
+                            <p>Mo-Fr: 9:00-18:00 Uhr<br>Sa: 9:00-14:00 Uhr</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div class="newsletter">
+                    <h3>Newsletter abonnieren</h3>
+                    <p>Bleiben Sie informiert über neue Ernten, Kurse und Veranstaltungen!</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ihre E-Mail-Adresse" class="newsletter-input" required>
+                        <button type="submit" class="btn btn-primary">Anmelden</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Imkerei Trinkaus</h4>
+                    <p>Natürlicher Honig aus der Region seit 1995</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Startseite</a></li>
+                        <li><a href="#products">Produkte</a></li>
+                        <li><a href="#news">Aktuelles</a></li>
+                        <li><a href="#shop">Bestellen</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Rechtliches</h4>
+                    <ul class="footer-links">
+                        <li><a href="#impressum">Impressum</a></li>
+                        <li><a href="#datenschutz">Datenschutz</a></li>
+                        <li><a href="#agb">AGB</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Imkerei Trinkaus. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
