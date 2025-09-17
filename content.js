@@ -4,8 +4,8 @@
 const CONTENT_DATA = {
     // HERO BEREICH
     hero: {
-        title: "Natürlicher Honig aus der Region",
-        subtitle: "Seit 1995 produzieren wir mit Liebe und Sorgfalt hochwertigen Honig für Sie und Ihre Familie.",
+        title: "Honig aus Witten-Heven und der Region",
+        subtitle: "Seit 2016 produzieren wir mit unseren Bienen mit Liebe und Sorgfalt Honig für Sie und Ihre Familie.",
         buttonPrimary: "Unser Honig",
         buttonSecondary: "Mehr erfahren"
     },
@@ -13,8 +13,8 @@ const CONTENT_DATA = {
     // ÜBER UNS
     about: {
         title: "Über unsere Imkerei", 
-        text1: "Seit über 25 Jahren führen wir unsere Imkerei mit Leidenschaft und Respekt vor der Natur. Unsere Bienen leben in natürlicher Umgebung und produzieren Honig höchster Qualität.",
-        text2: "Was uns besonders macht: Wir verzichten auf chemische Behandlungen und setzen auf natürliche Bienenhaltung. Unser Honig wird kalt geschleudert und nie erhitzt - so bleiben alle wertvollen Inhaltsstoffe erhalten.",
+        text1: "Seit fast 10 Jahren führen wir unsere Imkerei mit Leidenschaft und Respekt vor der Natur. Unsere Bienen leben in natürlicher Umgebung und produzieren Honig höchster Qualität.",
+        text2: "Was uns besonders macht: Wir verzichten auf chemische Behandlungen und setzen auf natürliche Bienenhaltung.",
         statsLabels: {
             experience: "Jahre Erfahrung",
             hives: "Bienenvölker", 
